@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A09BCD1F-C1F9-41BF-9C0E-27FDF50DCA8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagementSystemClient</RootNamespace>
+    <AssemblyName>LibraryManagementSystemClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AipSdk, Version=3.6.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Baidu.AI.3.6.14\lib\net45\AipSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.BonusSkins.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForms\FrmAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FrmAdmins.Designer.cs">
+      <DependentUpon>FrmAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FrmEmpower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FrmEmpower.Designer.cs">
+      <DependentUpon>FrmEmpower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookForms\FrmBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForms\FrmBooks.Designer.cs">
+      <DependentUpon>FrmBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookForms\FrmBooksInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForms\FrmBooksInfo.Designer.cs">
+      <DependentUpon>FrmBooksInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmReservation.Designer.cs">
+      <DependentUpon>FrmReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmBorrowInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmBorrowInfos.Designer.cs">
+      <DependentUpon>FrmBorrowInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmFinePayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmFinePayments.Designer.cs">
+      <DependentUpon>FrmFinePayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmBorrow.Designer.cs">
+      <DependentUpon>FrmBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmReservationInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingForms\FrmReservationInfos.Designer.cs">
+      <DependentUpon>FrmReservationInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEmployees.Designer.cs">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForms\FrmStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForms\FrmStudents.Designer.cs">
+      <DependentUpon>FrmStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\XucBookInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\XucBookInfo.Designer.cs">
+      <DependentUpon>XucBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemSettingForms\FrmBookCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingForms\FrmBookCategory.Designer.cs">
+      <DependentUpon>FrmBookCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettingForms\FrmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingForms\FrmLogs.Designer.cs">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettingForms\FrmPublishingHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingForms\FrmPublishingHouse.Designer.cs">
+      <DependentUpon>FrmPublishingHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\XucEmployeeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\XucEmployeeInfo.Designer.cs">
+      <DependentUpon>XucEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\XucStudentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\XucStudentInfo.Designer.cs">
+      <DependentUpon>XucStudentInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForms\FrmAdmins.resx">
+      <DependentUpon>FrmAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FrmEmpower.resx">
+      <DependentUpon>FrmEmpower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForms\FrmBooks.resx">
+      <DependentUpon>FrmBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForms\FrmBooksInfo.resx">
+      <DependentUpon>FrmBooksInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingForms\FrmReservation.resx">
+      <DependentUpon>FrmReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingForms\FrmBorrowInfos.resx">
+      <DependentUpon>FrmBorrowInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingForms\FrmFinePayments.resx">
+      <DependentUpon>FrmFinePayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingForms\FrmBorrow.resx">
+      <DependentUpon>FrmBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingForms\FrmReservationInfos.resx">
+      <DependentUpon>FrmReservationInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmEmployees.resx">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\FrmStudents.resx">
+      <DependentUpon>FrmStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\XucBookInfo.resx">
+      <DependentUpon>XucBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingForms\FrmBookCategory.resx">
+      <DependentUpon>FrmBookCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingForms\FrmLogs.resx">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingForms\FrmPublishingHouse.resx">
+      <DependentUpon>FrmPublishingHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\XucEmployeeInfo.resx">
+      <DependentUpon>XucEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\XucStudentInfo.resx">
+      <DependentUpon>XucStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryManagementSystemApiRequest\LibraryManagementSystemApiRequest.csproj">
+      <Project>{5d39f34e-761a-476e-a5c5-1fc6eca50960}</Project>
+      <Name>LibraryManagementSystemApiRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryManagementSystemCommon\LibraryManagementSystemCommon.csproj">
+      <Project>{dabd8fdf-8135-4d95-8ade-3537b8703cd3}</Project>
+      <Name>LibraryManagementSystemCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryManagementSystemModel\LibraryManagementSystemModel.csproj">
+      <Project>{63b02874-7804-4bfb-83ce-f050f9fa571c}</Project>
+      <Name>LibraryManagementSystemModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resource\学生.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resource\员工.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resource\管理员1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-in.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resource\已借阅待归还.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书籍.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book 61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book 62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xueshengsvg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yuangong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemManager2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuji1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xueshengsvg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yuangong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemManager21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\损坏.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下架.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\以借阅.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预约.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\正常.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\功能.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借阅功能.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预约功能.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借阅功能1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预约功能1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借阅功能2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预约功能2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借阅功能.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借阅功能3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预约功能3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_yuyueguanli_jiedaiyuyue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_yuyueguanli_yuyuebiangeng.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuji.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuesheng.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yuangongliebiao.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\权限对象赋权.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_yuyueguanli_jiedaiyuyue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_yuyueguanli_yuyuebiangeng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanxianduixiangfuquan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodanwancheng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanxianduixiangfuquan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodanwancheng1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanxianduixiangfuquan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodanwancheng2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodanwancheng3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biaodan3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
